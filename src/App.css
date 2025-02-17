@@ -1,0 +1,279 @@
+/* General Layout */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+/* Header Styles */
+.header {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0 0 0;
+  padding: 0;
+}
+
+.header nav li {
+  cursor: pointer;
+}
+
+.header nav li:hover {
+  color: #808080;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Snippet Generator */
+.snippet-generator {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+.snippet-generator h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.snippet-generator form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.snippet-generator textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 1rem;
+  border: 2px solid #1a1a1a;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  resize: vertical;
+  outline: none;
+}
+
+.snippet-generator textarea:focus {
+  border-color: #333;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.snippet-generator button {
+  background-color: #333333;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.snippet-generator button:hover {
+  background-color: #4d4d4d;
+}
+
+.snippet-generator button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Snippet List */
+.snippet-list {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.snippets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.snippet-placeholder {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 4px;
+  text-align: center;
+  color: #6c757d;
+}
+
+/* Snippet Detail */
+.snippet-detail {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.snippet-content {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.snippet-content pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.snippet-actions {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.snippet-actions button {
+  background-color: #333333;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.snippet-actions button:hover {
+  background-color: #4d4d4d;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .snippet-generator,
+  .snippet-list,
+  .snippet-detail {
+    padding: 1rem;
+  }
+
+  .snippets-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Generated Code Preview */
+.generated-code-preview {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border: 2px solid #1a1a1a;
+}
+
+.generated-code-preview h3 {
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+.generated-code-preview pre {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.code-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.code-actions button {
+  background-color: #333333;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.code-actions button:hover {
+  background-color: #4d4d4d;
+}
+
+.error-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fee;
+  color: #c00;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.loading-message {
+  text-align: center;
+  margin: 1rem 0;
+  color: #666;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
